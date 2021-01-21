@@ -6,8 +6,8 @@ const ascii = require("ascii-table");
 const { Command } = require("commander");
 const program = new Command();
 
-program.version("1.0.0").description("A simple cli for discord.js");
-// .requiredOption("-t, --token <token>", "token of the bot", setToken);
+program.version("1..0").description("A simple cli for discord.js")
+.requiredOption("-t, --token <token>", "token of the bot", setToken);
 
 ["command"].forEach((handler) => {
   require(`./handlers/${handler}`)(program);
